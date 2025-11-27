@@ -192,11 +192,11 @@ jobs:
           fi
         shell: bash
 
-      - name: Restore bridge files
-        uses: actions/download-artifact@master
-        with:
-          name: bridge-artifact
-          path: ./
+      # - name: Restore bridge files
+      #   uses: actions/download-artifact@master
+      #   with:
+      #     name: bridge-artifact
+      #     path: ./
 
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@v1
@@ -425,11 +425,11 @@ jobs:
       #     cd $(dirname $(dirname $(which flutter)))
       #     [[ "3.24.5" == ${{env.ANDROID_FLUTTER_VERSION}} ]] && git apply ${{ github.workspace }}/.github/patches/flutter_3.24.4_dropdown_menu_enableFilter.diff
 
-      - name: Restore bridge files
-        uses: actions/download-artifact@master
-        with:
-          name: bridge-artifact
-          path: ./
+      # - name: Restore bridge files
+      #   uses: actions/download-artifact@master
+      #   with:
+      #     name: bridge-artifact
+      #     path: ./
 
       - name: Download Rustdesk library from Artifacts
         uses: actions/download-artifact@master

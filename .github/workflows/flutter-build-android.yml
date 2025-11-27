@@ -211,8 +211,10 @@ jobs:
 
       - name: Build rustdesk lib
         env:
-          ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
-          ANDROID_NDK_ROOT: ${{ steps.setup-ndk.outputs.ndk-path }}
+          # ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
+          # ANDROID_NDK_ROOT: ${{ steps.setup-ndk.outputs.ndk-path }}
+          ANDROID_NDK_HOME: /home/lll/Android/Sdk/ndk/27.3.13750724
+          ANDROID_NDK_ROOT: /home/lll/Android/Sdk/ndk/27.3.13750724
         run: |
           rustup target add ${{ matrix.job.target }}
           cargo install cargo-ndk --version ${{ env.CARGO_NDK_VERSION }} --locked

@@ -217,7 +217,7 @@ jobs:
           ANDROID_NDK_ROOT: /home/lll/Android/Sdk/ndk/27.3.13750724
         run: |
           rustup target add ${{ matrix.job.target }}
-          cargo install cargo-ndk --version ${{ env.CARGO_NDK_VERSION }} --locked
+          cargo install cargo-ndk --version ${{ env.CARGO_NDK_VERSION }} --locked --force
           case ${{ matrix.job.target }} in
             aarch64-linux-android)
               ./flutter/ndk_arm64.sh
